@@ -5,195 +5,200 @@
         <meta name="keywords" content="HTML5,CSS,JS" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Informações para páginas responsivas-->
-        <link rel="stylesheet" href="style.css" />
-        <title>Linux suporte</title>
+        <link rel="stylesheet" href="./style/style.css" />
+        <title>Nixfieduser: Linux Help</title>
     </head>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="./pages/indicacoes.html">Indicações</a>
-        <a href="./pages/contato.html">Contato</a>
-        <a href="./pages/about.html">Sobre mim</a>
-    </nav>
-
     <body>
-        <h1>Assistência Linux</h1>
-        <p><strong>Instalação, tutoriais, dúvidas e migração</strong></p>
 
-        <p>
-            O mercado de computadores domésticos é dominado pela Microsoft,
-            sendo o Windows o sistema mais utilizado, entretanto, é também alvo
-            de críticas por políticas de uso restritas, práticas anticonsumidor,
-            por promover a obsolescência programada e a remoção de recursos
-            avançados de controle e gerência pelos usuários.
-        </p>
-        <div id="block1">
-            <h2 style="background-color: mediumpurple">Mitos:</h2>
-            <ol>
-                <li>
-                    O uso da linha de comando não é obrigatório, interfaces e
-                    recursos gráficos são disponibilizados ao usuário.
-                </li>
-                <li>
-                    A instalação pode ser realizada de diversas maneiras e
-                    níveis de dificuldade: distribuições tais como o Ubuntu e
-                    Linux Mint oferecem instaladores gráficos e automatizam
-                    muitas tarefas de configuração, em contrapartida, o Arch
-                    Linux e NixOS, por exemplo, requerem usuários mais
-                    competentes e confortáveis no uso de interfaces via linha de
-                    comando.
-                </li>
-                <li>
-                    A gratuidade do sistema operacional não é um indicativo
-                    sobre a sua qualidade: há distribuições que promovem a
-                    captação de recursos financeiros por vias de caráter
-                    comunitária e colaborativa, outras, tais como RHEL (Red Hat
-                    Enterprise Linux) e SLES (SUSE Linux Enterprise Server) são
-                    produtos vendidos com licenças comerciais. A empresa
-                    CANONICAL, desenvolvedora do Ubuntu, também oferece produtos
-                    e serviços orientados ao comércio e indústria.
-                </li>
-                <li>
-                    Não existe o sistema Linux, o ecossistema de código aberto e
-                    software livre é amplo, composto por vários projetos
-                    comunitários de níveis diferentes da hierarquia de um
-                    sistema operacional: variantes do Kernel, bibliotecas,
-                    interfaces gráficas (Desktop Environments e Window
-                    Managers), servidores gráficos e muito mais. Distribuições
-                    combinam diferentes partes e versões desses itens, também
-                    personalizam e desenvolvem componentes e serviços próprios.
-                </li>
-                <li>
-                    O ambiente Linux não é necessariamente mais seguro que o
-                    Windows ou demais sistemas proprietários: configurações de
-                    firewall, proxy e criptografia dependem do usuário, além de
-                    boas práticas de uso durante navegação na internet.
-                </li>
-            </ol>
+       
+
+        <div class="grid_layout">
+            <!-- Define o topo da página (cabeçalho)-->
+            <header class="grid_header">
+                <p><a href="https://nixfieduser.github.io/">Nixfieduser</a></p>
+                
+            </header>
+
+            <!-- main contem a navbar lateral esquerda e a coluna direita, na parte superior um bloco de conteúdo
+             e três divisões menores, em linha, na parte inferior-->
+
+             
+            <main class="grid_main">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    ☰
+                </button>
+                <nav class="grid_main_nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./pages/indicacoes.html">Indicações</a></li>
+                    <li><a href="./about.html">Sobre mim</a></li>
+                    </ul>
+
+                </nav>
+
+                <div class="grid_main_right">
+                    <section class="grid_main_block1">
+
+                        <div class="video-background">
+                            <video autoplay muted loop class="video-bg">
+                                <source src="./assets/video1.webm" type="video/webm">
+                            </video>
+                        </div>
+
+                        <p>
+                            O recente <a style="color:aquamarine; text-decoration: none" target="_blank" href="https://endof10.org/">fim do suporte ao Windows 10</a> 
+                            traz questões importantes sobre direitos dos consumidores,politicas de obsolescência programada promovidas pelas grandes empresas de tecnologia, privacidade e 
+                            segurança dos dados pessoais - questão esta que é ainda mais pertinente quando sob a perspectiva dos
+                            <a style="color:aquamarine; text-decoration: none" target="_blank" href="https://www.wired.com/story/microsoft-copilot-phishing-data-extraction/">novos recursos e serviços de IA</a> 
+                            . Além da tendência do software por assinatura, é notável a gradual perda de autonomia e domínio do usuário sobre as suas próprias máquinas e sistemas.
+                            <br><br>
+                            Nesse sentido, Linux e ferramentas de software livre apresentam-se como alternativas viáveis, tanto no 
+                            âmbito da computação pessoal quanto no meio empresarial.<br>
+                        </p>
+                         
+                        <div class="grid_main_block1_container">
+                            <div class="grid-item">
+                                
+                                <p><a style="text-decoration: none;" href="./getting_started.html">Primeiros passos...</a></p>
+                            </div>
+                            <div class="grid-item">
+                                
+                                <p><a style="text-decoration: none;" href="">Perguntas e respostas</a></p>
+                            </div>
+                           
+                        </div>
+
+                        
+
+
+                    </section>
+
+                    <section class="grid_main_blocks234">
+                        <article id="grid_main_block2">
+                            <h2 style="background-color: mediumpurple; border-top-left-radius: 20px;padding: 5px;">Mitos:</h2>
+                                <ol>
+                                    <li>
+                                        O uso da linha de comando não é obrigatório; interfaces
+                                        gráficas também estão disponíveis.
+                                    </li>
+                                    <li>
+                                        A instalação pode ser feita por instaladores gráficos
+                                        (Ubuntu, Mint) ou requerer conhecimento em linha de
+                                        comando (Arch, NixOS).
+                                    </li>
+                                    <li>
+                                        Código aberto não significa má aplicabilidade empresarial: existem distros
+                                        licenciadas comercialmente (RHEL, SLES e serviços de containers e Cloud do Ubuntu).
+                                    </li>
+                                    <li>
+                                        "Linux" é um ecossistema amplo que inclui kernel,
+                                        bibliotecas, DEs/WM e servidores gráficos; distribuições
+                                        combinam e customizam esses componentes.
+                                    </li>
+                                    <li>
+                                        Segurança depende de configurações do usuário (firewall,
+                                        proxy, criptografia), não apenas do sistema operacional.
+                                    </li>
+                                </ol>
+
+                        </article>
+
+                         <article id="grid_main_block3">
+                            <h2 style="background-color: #1ccf2b;padding: 5px;">Vantagens:</h2>
+                                <ol>
+                                    <li>
+                                        Linux suporta hardware legado sem exigir
+                                        Secure Boot/UEFI ou TPM 2.0, ao contrário do Windows 11.
+                                    </li>
+                                    <li>
+                                        A personalização avançada permite gerenciar processos de
+                                        fundo e eliminar telemetria automática.
+                                    </li>
+                                    <li>
+                                        Instalar aplicativos (Discord, VS Code, Steam) é simples
+                                        via repositórios, gerenciadores e App Stores em distros
+                                        como Ubuntu ou Linux Mint.
+                                    </li>
+                                    <li>
+                                        Ambientes gráficos (Plasma, GNOME) oferecem extensões
+                                        para customizar menus, painéis e temas.
+                                    </li>
+                                    <li>
+                                        Usuários avançados têm controle total sobre
+                                        compiladores, licenças e configurações do kernel.
+                                    </li>
+                                </ol>
+                            
+                        </article>
+
+                         <article id="grid_main_block4">
+                            <h2 style="background-color: #e66205; border-top-right-radius: 20px; padding: 5px;">Dificuldades:</h2>
+                                <ol>
+                                    <li>
+                                        Softwares proprietários (Office, Photoshop) não vêm
+                                        prontos; use alternativas opensource.
+                                    </li>
+                                    <li>
+                                        A indústria de jogos evoluiu: drivers e Proton rodam
+                                        muitos títulos, mas anticheat bloqueia alguns
+                                        multiplayer (ex.: Apex Legends, PUBG).
+                                    </li>
+                                    <li>
+                                        Distribuições são customizáveis, mas a fragmentação
+                                        atrapalha novos usuários.
+                                    </li>
+                                    <li>
+                                        Suporte ao hardware melhorou; periféricos proprietários
+                                        ainda carecem de drivers oficiais, embora projetos como
+                                        OpenRGB/OpenRazer ajudem.
+                                    </li>
+                                    <li>
+                                        Softwares com binário Linux (ex.: DaVinci Resolve)
+                                        oferecem suporte parcial e limitações em codecs na
+                                        versão gratuita.
+                                    </li>
+                                </ol>
+                            
+                        </article>
+
+                    </section>
+                </div>
+
+            </main>
+
+            <footer class="grid_footer">
+                 <p>Ferramentas utilizadas no desenvolvimento desse site:</p>
+                    <p>NixOS 25.11 | VS Code | Firefox 144</p>
+                    <p>
+                        <a href="./index.html">Assistência Linux</a> © 2025 by
+                        <a href="https://nixfieduser.github.io/">Flávio Rezende</a> is
+                        licensed under
+                        <a
+                            href="https://creativecommons.org/licenses/by/4.0/"
+                            target="_blank"
+                            >Creative Commons Attribution 4.0 International</a
+                        >
+                        <!-- target="blank" força abertura de página em nova aba -->
+                        <img
+                            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+                            alt=""
+                            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+                        /><img
+                            src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+                            alt=""
+                            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+                        />
+                    </p>
+            </footer>
+
         </div>
-        <div id="block2">
-            <h2 style="background-color: #1ccf2b">Vantagens:</h2>
-            <ol>
-                <li>
-                    Distribuições Linux podem oferecer melhor suporte para
-                    hardwares antigos e legados, ou para computadores que não
-                    estão adequados aos requerimentos de Secure Boot/UEFI e TPM
-                    2.0 (Trusted Public Plataform) do Windows 11.
-                </li>
-                <li>
-                    O alto grau de personalização existente na maioria dos
-                    sistemas baseados em Linux permitem aos usuários exercer
-                    maior controle sobre o SO, determinar quais tarefas e
-                    processos ocorrem em background, sem o envio automático de
-                    dados e informações para servidores externos através de
-                    serviços de telemetria não editáveis.
-                </li>
-                <li>
-                    A instalação de programas em distribuições tais como o
-                    Ubuntu e Linux Mint é facilitada pelo uso de repositórios e
-                    gerenciadores de software ou App Stores, diminuindo a
-                    dependência de instaladores externos. Programas populares
-                    como Discord, VSCode e Steam estão disponiveis para
-                    instalação no modo
-                    <i>single-click</i>, não sendo necessário, portanto,
-                    qualquer etapa de configuração posterior.
-                </li>
-                <li>
-                    As interfaces gráficas em ambientes Linux permitem fácil e
-                    ampla customização via recursos nativos ou extensões, por
-                    exemplo, o ambiente de desktop <i>Plasma</i> fornece
-                    abrangentes editores de menu, painéis e docks, cores e
-                    temas, permitindo, também, a instalação de applets e
-                    widgets. Em contraste, o ambiente <i>Gnome</i> prioriza uma
-                    interface minimalista e, por padrão, pouco customizável,
-                    entretanto há uma grande quantidade de extensões e programas
-                    capazes de alterar radicalmente as aparências e
-                    funcionalidades do sistema.
-                </li>
-                <li>
-                    Para usuários avançados, programadores ou entusiastas,
-                    distribuições Linux permitem maior controle sobre os
-                    ambientes de desenvolvimento e gerência do sistema,
-                    incluindo fácil acesso às especificações de licenças,
-                    compiladores e configurações de baixo nível, por exemplo:
-                    flags e propriedades do kernel.
-                </li>
-            </ol>
-        </div>
-        <div id="block3">
-            <h2 style="background-color: #e66205">Dificuldades:</h2>
-            <ol>
-                <li>
-                    Em razão do restrito marketshare e de práticas
-                    anticompetitivas, diversas aplicações proprietárias não
-                    estão disponíveis para a instalação e uso em ambientes
-                    Linux, por exemplo: Microsoft Office, Adobe Photoshop e
-                    Premiere. É necessária a verificação de compatibilidade
-                    conforme as preferências de uso do usuário e a busca por
-                    alternativas.
-                </li>
-                <li>
-                    Gaming é uma área que recebeu muitas melhorias nos últimos
-                    anos, incluindo aumento de performance nos drivers de gpus e
-                    compatibilidade com games triple-A, além disso, a maioria
-                    dos títulos disponíveis na Steam, Epic, Humble Bundle e
-                    várias outras stores é compatível através da camada de
-                    compatibilidade
-                    <i>Proton</i> desenvolvida pela Valve. Entretanto, jogos
-                    multiplayers tais como Apex Legends e PUBG:Battlegrounds não
-                    possuem <i>anticheats</i> compatíveis com o ambiente Linux.
-                </li>
-                <li>
-                    Embora a variedade de distribuições e aspectos
-                    personalizáveis são fatores destacados pela comunidade
-                    Linux, a fragmentação é ainda um problema, afetando
-                    negativamente a retenção de novos usuários.
-                </li>
-                <li>
-                    O suporte de hardware melhorou significamente na última
-                    década, principalmente sobre aqueles de autoria da Intel,
-                    AMD e Nvidia, incluindo o aumento de suas contribuições
-                    diretas ao Kernel, entretanto, o uso de periféricos com
-                    softwares proprietários ainda é uma situação problemática,
-                    por exemplo, drivers para controle de efeitos RGB em alguns
-                    componentes de hardware não possuem equivalentes de código
-                    aberto ou suporte oficial dos fabricantes. Openrgb e
-                    Openrazer são projetos que contribuem para a superação
-                    dessas limitações.
-                </li>
-                <li>
-                    Alguns softwares proprietários, com binários nativos para
-                    linux, por exemplo, <i>Davinci Resolve</i>, não oferecem
-                    suporte pleno, mesmo aos usuários assinantes. Outras
-                    possíveis dificuldades decorrem da configuração de drivers e
-                    codecs, Davinci, na versão gratuita, impõe significativas
-                    limitações aos usuários em ambientes Linux.
-                </li>
-            </ol>
-        </div>
-        <footer>
-            <p>Ferramentas utilizadas no desenvolvimento desse site:</p>
-            <p>NixOS 25.11 | Zed 0.199.10 | Brave v1.81.137</p>
-            <p>
-                <a href="./index.html">Assistência Linux</a> © 2025 by
-                <a href="https://nixfieduser.github.io/">Flávio Rezende</a> is
-                licensed under
-                <a
-                    href="https://creativecommons.org/licenses/by/4.0/"
-                    target="_blank"
-                    >Creative Commons Attribution 4.0 International</a
-                >
-                <!-- target="blank" força abertura de página em nova aba -->
-                <img
-                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
-                    alt=""
-                    style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
-                /><img
-                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
-                    alt=""
-                    style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
-                />
-            </p>
-        </footer>
+
+         <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.grid_main_nav').classList.toggle('active');
+            });
+        </script>
+
     </body>
 </html>

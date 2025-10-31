@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UFT-8" />
+        <meta name="keywords" content="HTML5,CSS,JS" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Informações para páginas responsivas-->
+        <link rel="stylesheet" href="./style/style2.css" />
+        <title>Nixfieduser: Linux Help</title>
+    </head>
+
+    <body>
+        <div class="grid_layout">
+            <!-- Define o topo da página (cabeçalho)-->
+            <header class="grid_header">
+                <p><a href="https://nixfieduser.github.io/">Nixfieduser</a></p>
+                
+            </header>
+
+            <!-- main contem a navbar lateral esquerda e a coluna direita, na parte superior um bloco de conteúdo
+             e três divisões menores, em linha, na parte inferior-->
+
+             
+            <main class="grid_main">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    ☰
+                </button>
+                <nav class="grid_main_nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./pages/indicacoes.html">Indicações</a></li>
+                    <li><a href="./about.html">Sobre mim</a></li>
+                    </ul>
+
+                </nav>
+
+                <div class="grid_main_right">
+
+                    <section class="grid_main_block1">
+
+                        <div class="video-background">
+                            <video autoplay muted loop class="video-bg">
+                                <source src="./assets/video2.webm" type="video/webm">
+                            </video>
+                        </div>
+
+                        <p>
+                            Instalar um sistema operacional é, para usuários leigos, uma tarefa desafiadora, entretanto, pode
+                            ser algo bastante facilitado quando acompanhado de material e tutoriais adequados. Possíveis complicações 
+                            podem surgir em razão de hardware sem suporte oficial, drivers de vídeo e firmware específicos.
+                            <br><br>
+                            Além disso, diferentes distribuições Linux e ambientes gráficos podem configurar um mesmo recurso de 
+                            maneira diferente, cabendo ao usuário identificar as peculariedades de cada sistema. Nesse sentido, apontar
+                            tais diferenças e soluções para os problemas mais comuns é uma etapa importante em qualquer material
+                            introdutório, principalmente quando sobre a instalação e configurações iniciais.  
+                        </p>
+
+                    </section>
+
+                    <section class="grid_main_block2345">
+                        <article id="grid_main_block2">
+                            <h2 style="background-color: mediumpurple;padding: 5px; border-radius: 20px;">Preparação:</h2>
+                                <ol>
+                                    <li>Certifique-se de gravar o arquivo .ISO corretamente no dispositivo USB. A transferência incorreta
+                                        dos dados pode comprometer a integridade do instalador. Utilize ferramentas tais como o Rufus ou Ventoy.
+                                    </li>
+                                    <li>
+                                        Priorize a instalação de distribuições Linux generalistas. Não utilize, em uma primeira experiência,
+                                        distros tais como o Kali Linux ou demais orientadas a um ramo específico da indústria.
+                                    </li>
+                                    <li>
+                                        Verifique o modelo de particionamento do seu dispositivo de armazenamento, se é MBR ou GPT. O boot da ISO 
+                                        depende de qual é o formato utilizado. Máquinas com UEFI são GPT.
+                                    </li>
+                                    <li>
+                                        Em configurações dual-boot, pode ser necessário restaurar o bootloader do Linux após atualizações 
+                                        do Windows.
+                                    </li>
+                                    <li>
+                                        Configurações com UEFI e <a target="_blank" href="https://wiki.ubuntu.com/UEFI/SecureBoot">Secure-Boot</a> 
+                                         habilitados podem requerer processos manuais para habilitar drivers
+                                        da Nvidia e módulos de kernel. 
+                                    </li>
+                                </ol>
+
+                        </article>
+
+                        
+
+                         <article id="grid_main_block3">
+                            <h2 style="background-color: #1ccf2b;padding: 5px; border-radius: 20px;">Instalação:</h2>
+                                <ol>
+                                    <li>Ubuntu, Linux Mint, Fedora e Bazzite são exemplos de distribuições com instaladores
+                                        gráficos. Em uma primeira experiência, priorize uma instalação automática ao invés de 
+                                        experimentar etapas mais avançadas, por exemplo, de particionamento manual.
+                                    </li>
+                                    <li>
+                                        Evite habilitar o UEFI (legacy mode é uma opção) e o Secure-Boot após a instalação de uma
+                                        distro, pode ser necessário reconfigurar o bootloader e drivers da Nvidia.
+                                    </li>
+                                    <li>
+                                        Programas e scripts de customização do bootloader e das telas de carregamento (Plymouth) 
+                                        podem ser prejudiciais, evite os seus usos sem conhecer a segurança e a documentação desses
+                                        projetos.
+                                    </li>
+                                    <li>
+                                        Priorize o uso da criptografia padrão, geralmente do tipo LUKS2 com particionamento LVM. É um recurso
+                                        presente na maioria dos instaladores, em muitos testes de performance com <b>nvmessd</b>, 
+                                        <a target="_blank" href="https://www.phoronix.com/review/ubuntu-2504-encryption">o overhad é desprezível.</a>.
+                            
+                                    </li>
+                                </ol>
+                            
+                        </article>
+
+                         <article id="grid_main_block4">
+                            <h2 style="background-color: #e66205; padding: 5px; border-radius: 20px;">Configurações Iniciais:</h2>
+                                <ol>
+                                    <li>No Ubuntu e Mint, por exemplo, os drivers da Nvidia e codecs proprietários (arquivos multimedia) 
+                                        são pré-instalados, entretanto, em outros sistemas, por exemplo, o Fedora, o processo é manual. 
+                                    </li>
+                                    <li>Certifique-se dos recursos de aceleração gráfica em browsers e programas especializados, por exemplo,
+                                        em editores de vídeo e Blender.
+                                    </li>
+                                    <li>
+                                        Problemas de performance podem ser causados pela configuração de <strong>swap</strong>, diferentes
+                                        distros possuem diferentes configurações. Em hardware mais moderno, priorize o uso do módulo 
+                                        <a target="_blank" href="https://wiki.archlinux.org/title/Zram">Zram</a> 
+                                        ao invés da tradicional partição swap ou do <b>swap file</b> no Ubuntu.
+                                    </li>
+                                    <li>
+                                        Performance pode ser melhorada através de diferentes kernels e schedulers, no Ubuntu, por exemplo, 
+                                        os kernels Liquorix ou Xanmod podem apresentar maior fluídez no uso do sistema.
+                                    </li>
+                                         
+                                    
+                                    <li>
+                                        Usuários da Nvidia com arquiteturas Turing, Ampere, Ada Lovelace, ou Hopper devem utilizar os módulos opensource
+                                        de kernel próprios da Nvidia. Placas mais antigas estão restritas aos drivers proprietários ou <b>Nouveau</b>.
+                                    </li>
+                                </ol>
+                            
+                        </article>
+
+                         <article id="grid_main_block5">
+                            <h2 style="background-color: #674cd3; padding: 5px; border-radius: 20px;">Aprimoramentos:</h2>
+                                <ol>
+                                    <li>
+                                        Containers e virtualização são bons recursos para experimentar configurações e sistemas de maior
+                                        complexidade. No Linux, ao invés do Virtualbox, o Virt-Manager (QEMU/KVM) pode apresentar
+                                        maior performance e recursos de configuração e monitoramento.
+                                    </li>
+                                    <li>
+                                        Programas de Windows, em muitos casos, podem funcionar via <b>Wine</b>, entretanto, é recomendável
+                                        utilizar ferramentas gráficas para gerenciar os recursos dessa camada de compatibilidade, exemplos são 
+                                        o <b>Bottles</b> e o <b>Lutris</b>.
+                                    </li>
+                                        
+                                    <li>
+                                        Na maioria das distribuições, pode-se instalar pacotes de outras distros via
+                                         <a target="_blank" href="https://www.linux.org/threads/run-any-linux-app-on-any-distro-with-distrobox.48007/">Distrobox</a> e 
+                                         <b>Toolbox</b>. Para usuários mais avançados, há opções como o gerenciador/linguagem <b>Nix</b> e <b>Homebrew</b>.
+                                    </li>
+                                    <li>
+                                        Os dois principais <a target="_blank" href="https://diolinux.com.br/editorial/xorg-e-wayland-o-que-sao.html">servidores/protocolos gráficos</a> são <b>Xorg</b> (tradicional) e o <b>Wayland</b>, mais moderno e com recursos avançados
+                                        de segurança. A adoção do Wayland pelos principais projetos opensource é crescente, mas há limitações de
+                                        acessibilidade e outros problemas em casos específicos. 
+                                    </li>
+                                </ol>
+                            
+                        </article>
+                        
+
+                        
+                         
+                    
+                        
+                    </section>
+
+                </div>
+            </main>
+
+
+            <footer class="grid_footer">
+                 <p>Ferramentas utilizadas no desenvolvimento desse site:</p>
+                    <p>NixOS 25.11 | VS Code | Firefox 144</p>
+                    <p>
+                        <a href="./index.html">Assistência Linux</a> © 2025 by
+                        <a href="https://nixfieduser.github.io/">Flávio Rezende</a> is
+                        licensed under
+                        <a
+                            href="https://creativecommons.org/licenses/by/4.0/"
+                            target="_blank"
+                            >Creative Commons Attribution 4.0 International</a
+                        >
+                        <!-- target="blank" força abertura de página em nova aba -->
+                        <img
+                            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+                            alt=""
+                            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+                        /><img
+                            src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+                            alt=""
+                            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+                        />
+                    </p>
+            </footer>
+
+
+        </div>
+
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.grid_main_nav').classList.toggle('active');
+            });
+        </script>
+
+    </body>
